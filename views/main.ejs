@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<% include wrap %>
+  <body>
+    <div id="wrap">
+      <div id="title">한자</div>
+      <input id="input"></input>
+      <div id="text">찾아보고 싶은 한자를 입력 후 Enter키를 누르세요</div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#input").keypress(function(e) {
+          if(e.which == 13) {
+            location.href = "/ch/" + $("#input").val();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
